@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Oscar Scholin</h1>
+    <style>
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: start;
+            padding: 20px;
+        }
+        .profile-image {
+            width: 290px; /* Adjust as needed */
+            height: auto;
+            margin-right: 20px;
+        }
+        .profile-figcaption {
+            width: 290px; /* Adjust as needed */
+            height: auto;
+            margin-right: 20px;
+        }
+        .projects {
+            font-weight: normal;
+        }
+        .project {
+            margin-bottom: 30px; /* Spacing between projects */
+        }
+        .project-figure {
+            width: auto;
+            margin-top: 15px; /* Adjust or remove margin as needed */
+        }
+        .project-image {
+            width: 600px; /* Fixed width for all project images */
+            height: auto; 
+            object-fit: cover; /* Ensures the image covers the area */
+            border-radius: 5px; /* Optional: Rounded corners */
+            margin-top: 15px; /* Adds space above the image */
+        }
+        .project-figcaption {
+            text-align: left; /* Centers the caption text */
+            margin-top: 5px; /* Spacing between image and caption */
+            font-size: 14px;
+            font-style: italic;
+            width: 600px;
+            margin-bottom: 10px;
+        }
+        .project-title {
+            font-size: 20px; /* Adjust as needed */
+            margin: none; /* Adjust as needed */
+        }
+        .project-description {
+            margin: 5px 0 0 0;
+            font-weight: normal;
+            object-fit: cover;
+            width: 600px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 0;
+            overflow-x: auto; /* Allows horizontal scrolling for many items */
+        }
+
+        .timeline-item {
+            position: relative;
+            text-align: center;
+            margin: 0 10px; /* Adjust spacing between items */
+        }
+
+        .timeline-marker {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #333;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 100%;
+            margin-bottom: 10px; /* Spacing between marker and top of content */
+        }
+
+        .timeline-content {
+            margin-top: 40px; /* Spacing between marker and content */
+            padding: 10px;
+            background-color: #f9f9f9; /* Optional: for content background */
+            border-radius: 5px; /* Optional: for rounded corners on content boxes */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: for box shadow on content */
+        }
+
+        /* Optional: Add media queries for responsiveness */
+        @media (max-width: 600px) {
+            .timeline {
+                flex-direction: column;
+            }
+            .timeline-item {
+                margin: 20px 0; /* Adjust spacing for mobile */
+            }
+            .timeline-marker {
+                bottom: auto;
+                top: 50%;
+                margin-bottom: 0;
+            }
+            .timeline-content {
+                margin-top: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <figure class="profile-figure">
+            <img src="images/oscar.jpeg" alt="Your Name" class="profile-image">
+            <figcaption class="profile-figcaption">Me at the summit of Mount Baldy! :-0 <br> <br>   Physics & Math major, <br> Pomona College 2024<br> <br> <br>the clouds, swooping in their faint and white<br>
+                obscure the wet sun like a psalm <br>
+                to our huts in the frozen desert aflame<br>
+                like the semiconductor chips that pump <br>
+                the heart of this mind consumed <br>
+                with this thought 
+                
+            </figcaption>
+        </figure>
+        <div class="projects">
+            <div class="project">
+                <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/tree/main" class="project-title">July 2023, Entanglement Witnessing</a>
+                <figure class="project-figure">
+                    <img src="images/quantum.jpeg" alt="waveplate setup" class="project-image">
+                    <figcaption class="project-figcaption">UV Half-wave plate, quartz crystal, precompensation crystal, and BBO in Prof. Lynn's Quantum Optics lab.</figcaption>
+                </figure>
+                <figure class="project-figure">
+                    <img src="images/comp.png" alt="results of neural networks." class="project-image">
+                    <figcaption class="project-figcaption">Performance comparison as a function of concurrence (the amount of entanglement required to call a state entangled) of different adaptive witnessing strategies, including an analytical method (Population), two XGBoost models, and a variety of neural networks.</figcaption>
+                </figure>
+                <p class="project-description">Wrote a lot of custom code to generate, manipulate, and measure (theoretically and experimentally) 2-qubit quantum states. Trained a variety of machine learning models (eXtreme gradient boosting, neural networks) on 4 million generated states with the goal of predicting the optimal set of measurements to take based on an initial set of projective probabilities, using entanglement witnesses. Achieved 4% increase in performance from previous models and successfully applied the models to experimental data. Presented results at SQuInT conference, October 2023. Also experimented with an automatic decomposition of a quantum state into Jones matrices via gradient descent, which achieved up to 99.3% fidelity in our experimental setup.</p>
+            </div>
+            <div class="project">
+                <a href="https://github.com/yourusername/project2" class="project-title">Project Title 2</a>
+                <figure class="project-figure">
+                    <img src="path/to/project2-image.jpg" alt="Project 2 Image" class="project-image">
+                    <figcaption class="project-figcaption">Caption for Project 2</figcaption>
+                </figure>
+                <p class="project-description">Description of Project 2.</p>
+            </div>
+            <!-- Add more projects as needed -->
+            <!-- <div class="project">
+                <a href="https://github.com/yourusername/project2" class="project-title">Project Title 2</a>
+                <figure class="project-figure">
+                    <img src="path/to/project2-image.jpg" alt="Project 2 Image" class="project-image">
+                    <figcaption class="project-figcaption">Caption for Project 2</figcaption>
+                </figure>
+                <p class="project-description">Description of Project 2.</p>
+            </div> -->
+        </div>
+    <!-- <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+            <h3>Project Title 2</h3>
+            <p>June 2021 - Description of Project 2...</p>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+            <h3>Project Title 3</h3>
+            <p>June 2021 - Description of Project 3...</p>
+        </div> -->
+    </div>
+    
+</body>
+</html>
