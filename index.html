@@ -6,10 +6,20 @@
 
         .container {
             display: flex;
+            /* flex-direction: column; */
             align-items: flex-start;
             justify-content: start;
             padding: 20px;
         }
+        .bio {
+            margin-right: 20px; /* Spacing between bio and projects */
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+        }
+
         .profile-image {
             width: 290px; /* Adjust as needed */
             height: auto;
@@ -131,9 +141,10 @@
     <div id="display-box">“To build our country and let it prosper. To see the country, under my hands, develop into a beautiful place.”<br>-- <a href = "https://youtu.be/F3ReQ-NCNoA?si=iVtQOeXsH3nBeNQq" >Palestinian child, 2021</a>
     </div>
     <div class="container">
+        <div class = "bio"
         <figure class="profile-figure">
             <img src="images/oscar.jpeg" alt="Your Name" class="profile-image">
-            <figcaption class="profile-figcaption">Me at the summit of Mount Baldy! :-0 <br> <br>   Physics & Math major, <br> Pomona College 2024<br> orsa2020@mymail.pomona.edu <br> <br> <br>the clouds, swooping in their faint and white<br>
+            <figcaption class="profile-figcaption">Me at the summit of Mount Baldy! :-0 <br> <br>   Physics & Math major, <br> Pomona College Class of 2024<br> orsa2020@mymail.pomona.edu <br> <br> <br>the clouds, swooping in their faint and white<br>
                 obscure the wet sun like a psalm <br>
                 to our huts in the frozen desert aflame<br>
                 like the semiconductor chips that pump <br>
@@ -143,23 +154,37 @@
                 See also my poetry website, <a href="https://oscars47.github.io/garbage-collector/" >oscars47.github.io/garbage-collector/</a>
             </figcaption>
         </figure>
+        </div>
         <div class="projects">
-            <div class="project">
+        <div class="project">
                 <a href="https://github.com/Lynn-Quantum-Optics/Fall-2023-Spring-2024" class="project-title">Fall 2023, Maximal LELM Distinguishability for d = 6</a>
                 <figure class="project-figure">
                     <img src="images/basis.png" alt="LELM image" class="project-image">
                     <figcaption class="project-figcaption">Illustration of the problem: perfectly entangled states enter an LELM device and yield a certain detection signature.</figcaption>
                 </figure>
-                <p class="project-description">For my physics senior thesis with Professor Lynn of Harvey Mudd, we are working on determining the maximal number of perfectly entangled states an LELM (linear evolution and linear measurement) device could distinguish. In particular, we are extending the work of Pisenti et al. (2011), who solved d = 2^n,  and Leslie et al. (2019), who solved d = 3, to the case of d = 6. The work involves a variety of analytical and computational methods, including a custom gradient descent algorithm to optimize for finding orthogonal solutions.</p>
-            </div>
+                <p class="project-description">For my physics senior thesis with Professor Lynn of Harvey Mudd, we are working on determining the maximal number of perfectly entangled states an LELM (linear evolution and linear measurement) device could distinguish. In particular, we are extending the work of Pisenti et al. (2011), who solved d = 2^n,  and Leslie et al. (2019), who solved d = 3, to the case of d = 6. The work involves a variety of analytical and computational methods, including a custom gradient descent algorithm to optimize for finding orthogonal solutions. <br></p>
+        </div>
+
             <div class="project">
                 <a href="https://github.com/Lynn-Quantum-Optics/Fall-2023-Spring-2024" class="project-title">Fall 2023, Sparsifying SYK Hamiltonians</a>
                 <figure class="project-figure">
                     <img src="images/hologram.png" alt="Project 2 Image" class="project-image">
                     <figcaption class="project-figcaption">a) and b) demonstrate the AdS/CFT correspondence: a) shows a system of two clouds of quantum particles, which are made to interact as a another particle (pink arrow) is injected into the system (conformal field theory); b) shows a system holographically dual system in a gravitation setting (AdS), in which the event horizons of two black holes are connected by an Einstein-Rosen bridge, which a particle traverses.</figcaption>
                 </figure>
-                <p class="project-description">For my math senior thesis with Professor Ami Radunskaya of Pomona College, we are simulating Sachdev-Ye-Kitaev Hamiltonians, which describe how a cloud of Majorana fermions. Inspired by Jafferis et al. 2022's simulation of quantum teleportation in this system of two of these clouds (which are dual in a gravitational system by the AdS-CFT correspondence to wormhole teleportation) but eager to address Kobrin et al. (2023)'s concerns over operator overfitting, we are developing a new training procedure and ML architecture in order to preserve scrambling dynamics while sparsifying the SYK Hamiltonians that describe the evolution of the system.</p>
-            </div>
+                <p class="project-description">For my math senior thesis with Professor Ami Radunskaya of Pomona College, we are simulating Sachdev-Ye-Kitaev Hamiltonians, which describe how a cloud of Majorana fermions. Inspired by Jafferis et al. 2022's simulation of quantum teleportation in this system of two of these clouds (which are dual in a gravitational system by the AdS-CFT correspondence to wormhole teleportation) but eager to address Kobrin et al. (2023)'s concerns over operator overfitting, we are developing a new training procedure and ML architecture in order to preserve scrambling dynamics while sparsifying the SYK Hamiltonians that describe the evolution of the system. I am pursuing a generalized algorithm to approximate unitaries with 2-qubit gates.</p>
+                </div>
+                
+            
+                <div class="project">
+                    <a  class="project-title">Winter 2023-, Qupid</a>
+                    <figure class="project-figure">
+                        <img src="images/qupid.png" alt="quantum cupid" class="project-image">
+                        <figcaption class="project-figcaption"></figcaption>
+                    </figure>
+                    <p class="project-description">
+                        Together with my classmates Larry Liu and Donny Lu, we are working on the a plan to build an optical quantum computer that addresses issues of multi-photon gate complexity and scalibility, with the goal to begin proptyping in Spring 2024. We are working with Professor Gallicchio of Harvey Mudd College as well as Professor Lynn of Harvey Mudd College informally. 
+                    </p>
+                </div>
             <div class="project">
                 <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/tree/main" class="project-title">Summer 2023, Entanglement Witnessing</a>
                 <figure class="project-figure">
@@ -172,7 +197,7 @@
                 </figure>
                 <p class="project-description">Wrote a lot of custom code to generate, manipulate, and measure (theoretically and experimentally) 2-qubit quantum states. Trained a variety of machine learning models (eXtreme gradient boosting, neural networks) on 4 million generated states with the goal of predicting the optimal set of measurements to take based on an initial set of projective probabilities, using entanglement witnesses building on those by Riccardi et al. (2019) and previous work by the group. Achieved <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/blob/main/oscar/writing/oscar_writeup.pdf">  4% increase in performance from previous models</a> and successfully applied the models to experimental data.
 
-                    Presented <a href = "https://github.com/Lynn-Quantum-Optics/Summer-2023/blob/main/Witness_Summer_2023_Poster.pdf">  results</a> at  <a href="https://physics.unm.edu/SQuInT/2023/index.php">   SQuInT conference, October 2023.</a> 
+                    Presented <a href = "https://github.com/Lynn-Quantum-Optics/Summer-2023/blob/main/Witness_Summer_2023_Poster.pdf">  results, "Entanglement Witnessing: a Neural Network Optimization and Experimental Realization", </a> at  <a href="https://physics.unm.edu/SQuInT/2023/index.php">   Southwest Quantum Information and Technology (SQuInT) conference, October 2023.</a> 
 
                     Also experimented with an automatic decomposition of a quantum state into Jones matrices via gradient descent, which   <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/blob/main/oscar/writing/instaq.pdf">  achieved up to 99.3% fidelity</a> in our experimental setup. </p>
                        
@@ -180,11 +205,11 @@
             <div class="project">
                 <a href="https://github.com/oscars47/UCVS" class="project-title">Summer 2022, Fall 2022; Fall 2023-Spring 2024, p-stars </a>
                 <figure class="project-figure">
-                    <img src="images/p-stars.jpeg" alt="Project 2 Image" class="project-image">
+                    <img src="images/p-stars.jpeg" alt="team pic!" class="project-image">
                     <figcaption class="project-figcaption">p-stars stars! Left to right, first row: Tom Tang, Lina McRoberts, Eve Zheng, Graham Hirsch; second row: Isaac Perez, Oscar Scholin, Leia Shen, Chengyi Tang, Aanya Pratapneni, Alice Tidmarsh, Sage Santomenna, Chris Wang. Not pictured: Elliot Schweitzer, Gada Tefera. </figcaption>
                 </figure>
                 <figure class="project-figure">
-                    <img src="images/confusion.png" alt="Project 2 Image" class="project-image">
+                    <img src="images/confusion.png" alt="confusion matrix" class="project-image">
                     <figcaption class="project-figcaption">
                         3D confusion matrix for a 1-hidden layer (which performed better suprisingly than a 5 hidden layer network) on about 150,000 unseen objects, from my Astronomy 101 final project in 2022.
                     </figcaption>
@@ -196,6 +221,18 @@
                 </p>
             </div> 
             <div class="project">
+                <a href="https://github.com/oscars47/q-elegans" class="project-title">Spring 2023, q-elegans</a>
+                <figure class="project-figure">
+                    <img src="images/q-elegans.png" alt="circuit" class="project-image">
+                    <figcaption class="project-figcaption">Sample circuit with 4 qubits, showing the initial encoding phase with Ry gates and the rest of the algorithm with entangling gates to various degrees, as well as a final sequence of Rx, Ry, and Rz gates.</figcaption>
+                </figure>
+                <figure class="project-figure">
+                    <img src="images/worm.webp" alt="c. elegans" class="project-image">
+                    <figcaption class="project-figcaption">The worm C. Elegans with its neurons shown in green, from <a href = "https://www.nature.com/articles/d41586-023-03619-w">nature.com/articles/d41586-023-03619-w</a>. </figcaption>
+                </figure>
+                <p class="project-description">Inspired by a paper about the strange behavior of neuropeptides in the worm C. elegans by Ripoll-Sánchez et al. (2023), I created this simple quantum circuit in Cirq as a possible hybrid quantum machine learning algorithm that takes classical inputs, converts them into quantum states via phase encoding, entangles all the states together--modeled on the action of the neuropeptides--to adjustable levels, and then performs single qubit rotations before converting back to classical probability output via measurement.</p>
+            </div>
+            <div class="project">
                 <a href="https://github.com/oscars47/Literary-RNN" class="project-title">Fall 2022, Thinking Parrot</a>
                 <figure class="project-figure">
                     <img src="images/wandb.png" alt="parallel coordinates plot" class="project-image">
@@ -204,11 +241,18 @@
                     </figcaption>
                 </figure>
                 <p class="project-description">Designed, implemented, and trained a custom long short-term memory (LSTM) recurrent nerual network called "Thinking Parrot" on the works of the ficitous scholar Nasrudin based on the lines, "To save money, I made my donkey go without food. Unfortunately the experiment was interrupted by its death. It died before it got used to having no food at all. People sell talking parrots for huge sums. They never pause to compare the possible value of a thinking parrot.". I wrote  <a href = "https://github.com/oscars47/Literary-RNN/tree/main/papers">two essays of over 120 words total</a> explaining the model to a non-CS audience and intepreting its results literarily.
-
-
                 </p>
 
             </div> 
+            <div class="project">
+                <a href="https://github.com/p-ai-org/p-music" class="project-title">Fall 2022, p-music</a>
+                <figure class="project-figure">
+                    <img src="images/music.png" alt="spectrogram" class="project-image">
+                    <figcaption class="project-figcaption">Spectrogram for the song "The Choice is Yours" generated through my pipeline.</figcaption>
+                </figure>
+                <p class="project-description">Worked with Seohyeon Lee and Marwin Bit in a project to rank top songs. I designed and implemented a automatic pipeline for given a list of songs, extract their metadata via Spotify API, download them locally and convert into spectrograms for input to a convolutional neural network to classify them.</p>
+            </div> 
+            </div>
             <!-- Add more projects as needed -->
             <!-- <div class="project">
                 <a href="https://github.com/yourusername/project2" class="project-title">Project Title 2</a>
