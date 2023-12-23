@@ -7,42 +7,49 @@
 
         .container {
             display: flex;
-            /* flex-direction: column; */
+            justify-content: space-between;
             align-items: flex-start;
-            justify-content: start;
             padding: 20px;
         }
-        .bio {
-            margin-right: 20px; /* Spacing between bio and projects */
+
+        .bio, .projects, .news {
+            flex: 1; /* Assign equal width to each column */
+            margin-right: 20px; /* Spacing between columns */
         }
 
-        .projects {
-            display: flex;
-            flex-direction: column;
+        .news {
+            margin-right: 0; /* No margin on the right side of the last column */
+            width: 30%
         }
 
         .profile-image {
-            width: 290px; /* Adjust as needed */
+            width: 70%; /* Adjust as needed */
             height: auto;
-            margin-right: 20px;
+            border-radius: 5px; /* Optional: Rounded corners */
+            /* margin-right: 20px; */
         }
         .profile-figcaption {
-            width: 290px; /* Adjust as needed */
+            width: 70%; /* Adjust as needed */
             height: auto;
-            margin-right: 20px;
+            /* margin-right: 20px; */
         }
         .projects {
             font-weight: normal;
         }
         .project {
             margin-bottom: 30px; /* Spacing between projects */
+            margin-left: -100px;
+            width: 100%;
+        }
+        .projects h2 {
+            margin-left: -100px; /* Adjust as needed */
         }
         .project-figure {
             width: auto;
             margin-top: 15px; /* Adjust or remove margin as needed */
         }
         .project-image {
-            width: 600px; /* Fixed width for all project images */
+            width: 100%; /* Fixed width for all project images */
             height: auto; 
             object-fit: cover; /* Ensures the image covers the area */
             border-radius: 5px; /* Optional: Rounded corners */
@@ -53,7 +60,7 @@
             margin-top: 5px; /* Spacing between image and caption */
             font-size: 14px;
             font-style: italic;
-            width: 600px;
+            width: 100%;
             margin-bottom: 10px;
         }
         .project-title {
@@ -64,7 +71,23 @@
             margin: 5px 0 0 0;
             font-weight: normal;
             object-fit: cover;
-            width: 600px;
+            width: 100%;
+        }
+        .news-item {
+            margin-bottom: 30px; /* Spacing between news announcements */
+        }
+
+        .news-title {
+            font-size: 20px; /* Adjust as needed */
+            margin: none; /* Adjust as needed */
+        }
+
+        .news-img {
+            width: 80%; /* Fixed width for all news images */
+            height: auto; 
+            object-fit: cover; /* Ensures the image covers the area */
+            border-radius: 5px; /* Optional: Rounded corners */
+            margin-top: 15px; /* Adds space above the image */
         }
 
         .timeline {
@@ -103,7 +126,7 @@
         }
 
         /* Optional: Add media queries for responsiveness */
-        @media (max-width: 600px) {
+        @media (max-width: 50%) {
             .timeline {
                 flex-direction: column;
             }
@@ -139,10 +162,11 @@
       
 </head>
 <body>
-    <div id="display-box">“To build our country and let it prosper. To see the country, under my hands, develop into a beautiful place.”<br>-- <a href = "https://youtu.be/F3ReQ-NCNoA?si=iVtQOeXsH3nBeNQq" >Palestinian child, 2021</a>
+    <div id="display-box">“If it turns out it’s like an onion with millions of layers and we’re just sick and tired of looking at the layers, then that’s the way it is"<br>— Richard Feynman</a>
     </div>
     <div class="container">
-        <div class = "bio"
+        <div class = "bio">
+            <h2>Bio</h2>
         <figure class="profile-figure">
             <img src="images/oscar.jpeg" alt="Your Name" class="profile-image">
             <figcaption class="profile-figcaption">Me at the summit of Mount Baldy! :-0 <br> <br>   Physics & Math Major, <br> Pomona College Class of 2024<br> orsa2020@mymail.pomona.edu <br> <a href = "https://docs.google.com/document/d/1WmzNkp5o3heBvHQIvt0a_i1oqDSSQ7sh69FjZnIpq9U/edit?usp=sharing" >Resume</a><br> <br> <br>the clouds, swooping in their faint and white<br>
@@ -150,13 +174,21 @@
                 to our huts in the frozen desert aflame<br>
                 like the semiconductor chips that pump <br>
                 the heart of this mind consumed <br>
-                with this thought <br> <br><br>
+                with this thought 
+                <br> <br> 
+                —————————————————— 
+                <br> <br> 
 
-                See also my poetry website, <a href="https://oscars47.github.io/garbage-collector/" >oscars47.github.io/garbage-collector/</a>
+                I keep a blog on AI and consciousness, <a href = "https://oscars47.github.io/math-zombies/">oscars47.github.io/math-zombies/</a>, along with Professor Gizem Karaali and Kamden Baer. <br> <br> <br>
+
+                See also my poetry website, <a href="https://oscars47.github.io/garbage-collector/" >oscars47.github.io/garbage-collector/</a>.
+                <br> <br> <br>
+                
             </figcaption>
         </figure>
         </div>
         <div class="projects">
+            <h2>Projects</h2>
             <div class="project">
                 <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/tree/main" class="project-title">Summer 2023, Entanglement Witnessing</a>
                 <figure class="project-figure">
@@ -278,6 +310,30 @@
             <h3>Project Title 3</h3>
             <p>June 2021 - Description of Project 3...</p>
         </div> -->
+    <div class="news">
+        <h2>News</h2> <!-- Label for the news column -->
+        
+    <div class="news-item">
+
+        <h3 class="news-title">December 2023</h3>
+        <figure class="news-figure">
+            <img src="images/trabbit.png" alt="trabbit" class="news-img">
+            <figcaption class="news-figcaption">Artistic representation of my trabbit algorithm.</figcaption>
+        </figure>
+        <p class="news-description">Published a package with the function trabbit, a custom gradient-descent based optimization algorithm, available at <a href="https://pypi.org/project/oscars-toolbox/">pypi.org/project/oscars-toolbox/</a>.</p>
+
+
+        
+
+        <h3 class="news-title">October 2023</h3>
+        <figure class="news-figure">
+            <img src="images/squint.jpeg" alt="squint" class="news-img">
+            <figcaption class="news-figcaption">Southwest Quantum Information and Technology (SQuInT) conference, October 2023.</figcaption>
+        </figure>
+        <p class="news-description">Presented results, "Entanglement Witnessing: a Neural Network Optimization and Experimental Realization", at <a href="https://physics.unm.edu/SQuInT/2023/index.php">Southwest Quantum Information and Technology (SQuInT) conference, October 2023</a>. </p>
+
+    </div>
+
     </div>
     
 </body>
