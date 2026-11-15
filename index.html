@@ -1,458 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Oscar Scholin</title>
-    <h1>&nbsp;&nbsp;Oscar Scholin</h1>
-    <style>
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px;
-        }
-
-        .bio, .projects, .news {
-            flex: 1; /* Assign equal width to each column */
-            margin-right: 20px; /* Spacing between columns */
-        }
-
-        .news {
-            margin-right: 0; /* No margin on the right side of the last column */
-            width: 30%
-        }
-
-        .profile-image {
-            width: 70%; /* Adjust as needed */
-            height: auto;
-            border-radius: 5px; /* Optional: Rounded corners */
-            /* margin-right: 20px; */
-        }
-        .profile-figcaption {
-            width: 70%; /* Adjust as needed */
-            height: auto;
-            /* margin-right: 20px; */
-        }
-        .projects {
-            font-weight: normal;
-        }
-        .project {
-            margin-bottom: 30px; /* Spacing between projects */
-            margin-left: -100px;
-            width: 100%;
-        }
-        .projects h2 {
-            margin-left: -100px; /* Adjust as needed */
-        }
-        .project-figure {
-            width: auto;
-            margin-top: 15px; /* Adjust or remove margin as needed */
-        }
-        .project-image {
-            width: 100%; /* Fixed width for all project images */
-            height: auto; 
-            object-fit: cover; /* Ensures the image covers the area */
-            border-radius: 5px; /* Optional: Rounded corners */
-            margin-top: 15px; /* Adds space above the image */
-        }
-        .project-figcaption {
-            text-align: left; /* Centers the caption text */
-            margin-top: 5px; /* Spacing between image and caption */
-            font-size: 14px;
-            font-style: italic;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .project-title {
-            font-size: 20px; /* Adjust as needed */
-            margin: none; /* Adjust as needed */
-        }
-        .project-description {
-            margin: 5px 0 0 0;
-            font-weight: normal;
-            object-fit: cover;
-            width: 100%;
-        }
-        .news-item {
-            margin-bottom: 30px; /* Spacing between news announcements */
-        }
-
-        .news-title {
-            font-size: 20px; /* Adjust as needed */
-            margin: none; /* Adjust as needed */
-        }
-
-        .news-img {
-            width: 80%; /* Fixed width for all news images */
-            height: auto; 
-            object-fit: cover; /* Ensures the image covers the area */
-            border-radius: 5px; /* Optional: Rounded corners */
-            margin-top: 15px; /* Adds space above the image */
-        }
-
-        .timeline {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 20px 0;
-            overflow-x: auto; /* Allows horizontal scrolling for many items */
-        }
-
-        .timeline-item {
-            position: relative;
-            text-align: center;
-            margin: 0 10px; /* Adjust spacing between items */
-        }
-
-        .timeline-marker {
-            width: 20px;
-            height: 20px;
-            border: 3px solid #333;
-            background-color: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 100%;
-            margin-bottom: 10px; /* Spacing between marker and top of content */
-        }
-
-        .timeline-content {
-            margin-top: 40px; /* Spacing between marker and content */
-            padding: 10px;
-            background-color: #f9f9f9; /* Optional: for content background */
-            border-radius: 5px; /* Optional: for rounded corners on content boxes */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: for box shadow on content */
-        }
-
-        /* Optional: Add media queries for responsiveness */
-        @media (max-width: 50%) {
-            .timeline {
-                flex-direction: column;
-            }
-            .timeline-item {
-                margin: 20px 0; /* Adjust spacing for mobile */
-            }
-            .timeline-marker {
-                bottom: auto;
-                top: 50%;
-                margin-bottom: 0;
-            }
-            .timeline-content {
-                margin-top: 10px;
-            }
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        #display-box {
-            /* border: 1px solid #ccc; Border to look like a textbox */
-            padding: 10px; /* Padding inside the box */
-            margin: 10px 0; /* Margin around the box */
-            width: 100%; /* Or any width you prefer */
-            color: rgb(206, 15, 101); /* Text color */
-            font-family: Arial, sans-serif; /* Font style */
-            box-sizing: border-box; /* Include padding in width calculation */
-            background-color: white; /* Background color like a textbox */
-}
-
-    </style>
-      
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oscar Scholin</title>
+<meta name="description" content="Oscar Scholin — DPhil in Physics, University of Oxford. Encoding and extraction of data for quantum devices.">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Applied before paint so the page never flashes the wrong theme.
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
 </head>
-<div id="display-box">“If it turns out it’s like an onion with millions of layers and we’re just sick and tired of looking at the layers, then that’s the way it is."<br>— Richard Feynman</a>
-    <br> <br>
-
-    <p style="color: blue;">&copy; 2024 Oscar Scholin. All rights reserved.</p>
-    <p style="color: blue;">This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
-</div>
 <body>
-    <div class="container">
-        <div class = "bio">
-            <h2>Bio</h2>
-        <figure class="profile-figure">
-            <img src="images/oscar.jpeg" alt="Picture of me on Mount Baldy" class="profile-image">
-            <figcaption class="profile-figcaption"><small>At the summit of Mount Baldy! :-0 </small><br> <br>  Machine Learning Engineer and Senior Personnel, <a href = "https://data-to-decision.com/" >Dasion (Data-To-Decision)</a>. <br><br> Incoming MPhil in Physics, <br> University of Cambridge Class of 2025. <br> <br>
-                Quantum Physics and ML Researcher, <br> Imperial College. <br> <br>
-                B.A. Physics & Math, <br> Pomona College Class of 2024<br> <br>orsa2020@mymail.pomona.edu <br> <a href = "https://docs.google.com/document/d/1WmzNkp5o3heBvHQIvt0a_i1oqDSSQ7sh69FjZnIpq9U/edit?usp=sharing" >Resume</a><br> <a href= "https://www.linkedin.com/in/oscar-scholin-3aa1a01a5">Linkedin</a>
-                
-                <br> <br>
-                —————————————————— 
-                <br> <br>
 
-                I keep a blog on AI and consciousness with a cool backend (see project description on this page), <a href = "https://oscars47.github.io/math-zombies/">oscars47.github.io/math-zombies/</a>, along with Professor Gizem Karaali and Kamden Baer. <br> <br>
+<button id="theme-toggle" type="button" aria-label="Switch colour theme">
+  <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.2"></circle>
+    <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"></path>
+  </svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20 14.5A8.2 8.2 0 0 1 9.5 4a8.3 8.3 0 1 0 10.5 10.5z"></path>
+  </svg>
+</button>
 
-                See also my poetry website, <a href="https://oscars47.github.io/garbage-collector/" >oscars47.github.io/garbage-collector/</a>.
+<header>
+  <h1>Oscar Scholin</h1>
+</header>
 
-                <br> <br> 
-                —————————————————— 
-                <br> <br> 
-                <b>Scientific Publications</b>:
-                <br> 
-                <ol>
-                    <li>Scholin, O. and Lynn, T.W. 2024. "Maximal Limits on Distinguishing Bell States with d-dimensional Single Particles by Linear Evolution and Local Projective Measurement." Submitting to Physical Review A. </li> <br>
+<main>
+  <div class="layout">
 
-                    <li>Scholin, O., Zheng, R., Roberson, A., and Lynn, T.W. 2023. "Entanglement Witnessing: a Neural Network Optimization and Experimental Realization." Poster presented at Southwest Quantum Information and Technology (SQuInT) conference. </li> <br>
+    <aside class="portrait">
+      <img id="portrait-img" src="images/oscar.jpeg" alt="Oscar Scholin">
+      <nav class="links">
+        <a href="https://scholar.google.com/citations?user=60-BAFwAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="cv.pdf">CV</a>
+        <a href="collab.html">Years in research</a>
+      </nav>
+    </aside>
 
-                </ol>
+    <section class="content">
 
-                —————————————————— 
-                <br> <br> 
-                <b>Literary Publications</b>:
-                <br> 
-                <ol>
-                    <li>Scholin, O. 2023. "An Interview with Jonathan Lethem." <a href = "https://nwreview.org/journal/52/02/oscar-scholin/">Northwest Review, 52.02.</a></li>
-                    <br> 
-                    <li>Scholin, O. 2022. "Look Up—Please, Please Do." <a href = " https://nwreview.org/journal/51/02/oscar-scholin/" >Northwest Review, 51.02.</a></li> 
-                </ol>
+      <h2>Research interests</h2>
+      <p>
+        My research centers on the encoding and extraction of data for quantum devices. I am interested primarily in understanding how to control and measure information in quantum many-body systems. This I do through theory, most recently focusing on the one hand on randomized measurements in systems with limited local control and on the other hand block encoding-based techniques. 
+         </p>
+         <p>
+        I also collaborate directly with experimentalists to test and implement some of these ideas on a variety of platforms, including neutral atoms in tweezer arrays and ultracold atoms in optical lattices. Often, I find that the constraints of an experiment themselves present interesting theoretical problems and give inspiration for new, simple approaches.
+         </p>
 
-            </figcaption>
-        </figure>
-        </div>
-        <div class="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <a  href = "https://github.com/Dasion-MVP/Dasion-OSCAR" class="project-title">May 2024 - , Project OSCAR at Daison (Data-To-Decision)</a> 
-                <figure class="project-figure">
-                    <img src="images/oscar_dasion.png" alt="team pic!" class="project-image">
-                    <!-- <figcaption class="project-figcaption">Confusion matrix for all digits in the MNIST dataset using the method developed for Dasion during Spring 2024, showing overall accuracy of 64.2%.</figcaption> -->
-                </figure>
-                <figure class="project-figure">
-                    <img src="images/audio_results.png" alt="team pic!" class="project-image">
-                    <figcaption class="project-figcaption">Confusion matrices for 39 species discrimination on the Watkins Marine Mammals dataset. Top row is using an XGB model trained on extracted features, and the bottom is using a retrained ResNet-50. First column is validation dataset, second is test.</figcaption>
-                </figure>
-                <p class="project-description">
-                    OSCAR (named by Professor Weiqing Gu) is my first project at Dasion as as Machine Learning Engineer, of which I am senior personnel / lead researcher. OSCAR stands for Ocean Science Cutting-edge Anomaly Research, and the focus is developing an interpetable, differential geometric approach to real-time, energy efficient decision making in underwater autonomous vehicles. Helped co-author a grant proposal and a patent application. Currently, I have tested on the <a href = "https://go.whoi.edu/marine-mammal-sounds">Watkins Marine Mammal</a> acoustic dataset, achieving 99.3% validation accuracy and 98.7% test accuracy on distinguishing 39 different classes of mammals on a max depth 5 50 esimtator eXtreme Gradient Boosting model. In collaboration with researchers at <a href = "https://www.mbari.org/"> MBARI (Monterey Bay Aquarium Research Institute)</a> to extend this model to other kinds of data.
-                </p>
-            </div>
-            <div class="project">
-                <a href="https://github.com/Lynn-Quantum-Optics/Fall-2023-Spring-2024" class="project-title">Fall 2023-Spring 2024, SOLVED: Maximal LELM Distinguishability for Single Particles with Even Hilbert Space Dimension</a>
-                <figure class="project-figure">
-                    <img src="images/basis.png" alt="LELM image" class="project-image">
-                    <figcaption class="project-figcaption">Illustration of the problem: perfectly entangled states enter an LELM device and yield a certain detection signature.</figcaption>
-                </figure>
-                <p class="project-description">For my physics senior thesis with Professor Lynn of Harvey Mudd, I have determined the number of bell states with single particles of dimension d an LELM (linear evolution and local measurement) device can distinguish using an analytic argument. The answer is k = 2*d-1 out of d^2. This question is motivated by the audacious assumption that one doesn't possess a quantum computer ready at hand but is interested in performing some algorithm or communication protocol somehow involving a bell state measurement. This extends the work of Pisenti et al. (2011), who solved d = 2^n,  and Leslie et al. (2019), who solved d = 3. A manuscript is in progress. I am also attempting to solve the odd dimension case to complete this problem. To see my full thesis, visit <a href="https://drive.google.com/file/d/1IlF4tuAiffLrYqabKkkzncYCHXNTsKM3/view?usp=drive_link">here</a>.<br></p>
-        </div>
+        <p>
+          My email is <a href="mailto:oscar.scholin@physics.ox.ac.uk">oscar.scholin@physics.ox.ac.uk</a>; feel free to reach out with any questions or suggestions. 
+        </p>
+ 
+      <p>
+        Below are some snapshots of my recent work.
+      </p>
 
-         <div class="project">
-                <a href="https://github.com/oscars47/DrLeeGBS" class="project-title">June 2024 - , Smiluating HA electron transfer with Gaussian Boson Sampling</a>
-                <figure class="project-figure">
-                    <img src="images/gbs.png" alt="Project 2 Image" class="project-image">
-                    <figcaption class="project-figcaption">Abstract rendition of the electron transport simulation from souirce electrode to molecule to drain, which is reflected by a quantum algorithm, from Jahangiri, Arrazola, Delgado  2021.</figcaption>
-                </figure>
-                <!-- <figure class="project-figure">
-                    <img src="images/gbs_code.png" alt="Project 2 Image" class="project-image">
-                    <figcaption class="project-figcaption">Code flow diagram of the code I developed for hybrid quantum-classical learning.</figcaption>
-                </figure> -->
-                <p class="project-description">Hydraluric acid is an important component of the cell outer envelopes of various anaerobic bacteria. Working with Dr. Lee, Dr. Yu, Xinyi Dong, Yomna Mohamed, Daiki Kawagishi, and Michelle Ho, we are attempting to describe the quantum effects of electron transfer in a single polymer chain of this molecule using the technique of Guassian Boson Sampling, a method of photonic quantum computing. I am developing a qumode reduction algorithm that is a hybrid quantum-classical machine learning algorithm to enable simulation with noise on current photonic devices.</p>
-            </div>
-            
-            <div class="project">
-                <a href="https://github.com/oscars47/Math-Thesis" class="project-title">Fall 2023-Spring 2024, Simulating Wormhole
-                    Teleportation and Learning Mutual Information on an IBM Eagle Processor</a>
-                <figure class="project-figure">
-                    <img src="images/hologram.png" alt="Project 2 Image" class="project-image">
-                    <figcaption class="project-figcaption">a) and b) demonstrate the AdS/CFT correspondence: a) shows a system of two clouds of quantum particles, which are made to interact as a another particle (pink arrow) is injected into the system (conformal field theory); b) shows a system holographically dual system in a gravitation setting (AdS), in which the event horizons of two black holes are connected by an Einstein-Rosen bridge, which a particle traverses.</figcaption>
-                </figure>
-                <figure class="project-figure">
-                    <img src="images/mutual_info.png" alt="Project 2 Image" class="project-image">
-                    <figcaption class="project-figcaption">Mutual information comparison of theoretical (red), noisy simulations (orange and yellow with varying numbers of shots), and actual experimental data (blue). Each datapoint represents the mean of 5 trials, with error bars showing the SEM. Built in Python with Qiskit. Obtained on a 3 qubit circuit with a Hadamard and 2 U(3) gates, whose parameters were learned via stochastic gradient descent (SGD).</figcaption>
-                </figure>
-                <figure class="project-figure">
-                    <img src="images/mi_sim2.png" alt = "Project 2 Image" class="project-image">
-                    <figcaption class="project-figcaption">Results of full wormhole protocol simulation (100 times per configuration) trying a variety of ansatzes for the variational quantum eigensolver (VQE) and mu values (coupling parameter between the two black holes).</figcaption>
-                </figure>
-                <p class="project-description">For my math senior thesis with Professor Ami Radunskaya of Pomona College, I implemented the wormhole teleportation protocol of Jafferis et al. (2022), which examines a two cloud system of Majorana fermions as dual to a gravitational system with two black holes, in Qiskit and obtained experimental data from the IBM Kyoto processor on a simplified 3 qubit setup trained to replicate mutual information curves from the Jafferis paper. I also ran a full simulation of the protocol as shown above for 12 qubits, 333 CNOT gates, and 171 U(3) gates, testing a variety of ansatzes for the variational quantum eigensolver (VQE) and mu values (coupling parameter between the two black holes). The only sensible ansatz was the first (should be no mutual information at mu = 0), but the other mutual information curves do not seem to follow the general trend reported by Jafferis et al. To see my full thesis, visit <a href="https://drive.google.com/file/d/1DeM4A7FomhmU7Yo0VBtE7zk76uasXxdk/view?usp=drive_link">here</a>.   We are working on a new training procedure and ML architecture in order to preserve scrambling dynamics while sparsifying the SYK Hamiltonians that describe the evolution of the system. </p>
-                </div>
-
-                <div class="project">
-                    <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/tree/main" class="project-title">Summer 2023, Entanglement Witnessing</a>
-                    <figure class="project-figure">
-                        <img src="images/quantum.jpeg" alt="waveplate setup" class="project-image">
-                        <figcaption class="project-figcaption">UV Half-wave plate, quartz crystal, precompensation crystal, and BBO in <a href = "https://github.com/Lynn-Quantum-Optics" >Prof. Lynn's Quantum Optics lab</a>.</figcaption>
-                    </figure>
-                    <figure class="project-figure">
-                        <img src="images/comp.png" alt="results of neural networks." class="project-image">
-                        <figcaption class="project-figcaption">Performance comparison as a function of concurrence (the amount of entanglement required to call a state entangled) of different adaptive witnessing strategies, including an analytical method (Population), two XGBoost models, and a variety of neural networks.</figcaption>
-                    </figure>
-                    <p class="project-description">Wrote a lot of custom code to generate, manipulate, and measure (theoretically and experimentally) 2-qubit quantum states. Trained a variety of machine learning models (eXtreme gradient boosting, neural networks) on 4 million generated states with the goal of predicting the optimal set of next measurements to take in order to most efficiently verify entanglement based on an initial set of projective probabilities, using entanglement witnesses building on those by Riccardi et al. (2019) and previous work by the group. Achieved <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/blob/main/oscar/writing/oscar_writeup.pdf">  4% increase in performance from previous models</a> and successfully applied the models to experimental data.
-    
-                        Presented <a href = "https://github.com/Lynn-Quantum-Optics/Summer-2023/blob/main/Witness_Summer_2023_Poster.pdf">  results, "Entanglement Witnessing: a Neural Network Optimization and Experimental Realization", </a> at  <a href="https://physics.unm.edu/SQuInT/2023/index.php">   Southwest Quantum Information and Technology (SQuInT) conference, October 2023.</a> 
-    
-                        Also experimented with an automatic decomposition of a quantum state into Jones matrices via gradient descent, which   <a href="https://github.com/Lynn-Quantum-Optics/Summer-2023/blob/main/oscar/writing/instaq.pdf">  achieved up to 99.3% fidelity</a> in our experimental setup. </p>
-                           
-                </div>
-                
-            
-                <div class="project">
-                    <a  href = "https://github.com/oscars47/Qupid" class="project-title" >Winter 2023-Spring 2024, Qupid</a>
-                    <figure class="project-figure">
-                        <img src="images/qupid.png" alt="quantum cupid" class="project-image">
-                        <figcaption class="project-figcaption">Optics setup to test one of our quantum logic gate configurations.</figcaption>
-                    </figure>
-                    <p class="project-description">
-                        Independent research project with Larry Liu (Pomona '24), Tom Tang (Pomona '24), Donny Lu (Pomona '24), Song Song (Pomona '24), and Professor Jason Gallicchio of Harvey Mudd College. We focused on examining the current approaches to actual quantum computing, in which we started with linear optical conditional gates in photonic systems, then moved to photonic chips, Gaussian Boson Sampling, superconducting qubits, trapped ion qubits, topological qubits, and free electron qubits. We produced a review paper and an in depth annotated literature review, both of which are aimed at other interested advanced undergraduates. See our review paper <a href = "https://drive.google.com/file/d/1qkGcG150YRaS5lVYpHBsAY-9owmPueTi/view?usp=drive_link" >here</a>. </p>
-                    </p>
-                </div>
-
-                <div class="project">
-                    <a  href = "https://github.com/oscars47/BigData" class="project-title">January 2023-May 2024, Daison (Data-To-Decision)</a> 
-                    <figure class="project-figure">
-                        <img src="images/mnist_cm.png" alt="team pic!" class="project-image">
-                        <figcaption class="project-figcaption">Confusion matrix for all digits in the MNIST dataset using the method developed for Dasion during Spring 2024, showing overall accuracy of 64.2%.</figcaption>
-                    </figure>
-                    <p class="project-description">
-                        Machine learning intern at Dasion (Data-To-Decision) working with Professor Weiqing Gu of Harvey Mudd on problems involving differential geometry. Developed code to classify the MNIST digits without using regression or neural networks, but by understanding the geometry of the digits. Achieved accuracy of 64.2% on all 10 digits; 93% on comparing 0, 1, and 9. Using a 2 hidden layer neural network on image moments, eachieved up 92.6% accuracy on all 10 digits. See <a href = "https://www.youtube.com/watch?v=z8MzZwYQ8K0" >Video presentation 1</a> and <a href = "https://www.youtube.com/watch?v=NEXNGiLWP2c" >Video presentation 2</a> for more details.
-                    </p>
-                </div>
-
-           <div class="project">
-                <a href="https://github.com/oscars47/math-zombies" class="project-title">Thanksgiving Break 2023, Math Zombies Website</a>
-                <figure class="project-figure">
-                    <img src="images/zombies.png" alt="website scheme" class="project-image">
-                    <figcaption class="project-figcaption">Flowchart of backend for the website.</figcaption>
-                </figure>
-                <p class="project-description">Created a custom backend for the website <a href = "https://oscars47.github.io/math-zombies/" >oscars47.github.io/math-zombies</a>, described in the above graphic. A password protected Google form is used to submit blog posts for verified users, which calls a Google Scripts file to create automatically formatted HTML file for the post as well as a mini description of the post to go on the main post page. This file calls a Javascript file running on an Amazon EC2 server to automatically insert the mini description onto the main page in HTML and then add the full post and image as a separate Git branch. A merge request is then made to the main branch, which is reviewed by me upon the generation of an automatic email. The website is hosted on Github Pages and currently has two other blog posters, Professor Gizem Karaali of Pomona College and Kamden Baer (Pomona '24).</p>
-                </p>
-            </div>
-            
-            <div class="project">
-                <a href="https://github.com/oscars47/UCVS" class="project-title">Summer 2022, Fall 2022; Fall 2023-Spring 2024, p-stars </a>
-                <figure class="project-figure">
-                    <img src="images/p-stars.jpeg" alt="team pic!" class="project-image">
-                    <figcaption class="project-figcaption">p-stars stars! Left to right, first row: Tom Tang, Lina McRoberts, Eve Zheng, Graham Hirsch; second row: Isaac Perez, Oscar Scholin, Leia Shen, Chengyi Tang, Aanya Pratapneni, Alice Tidmarsh, Sage Santomenna, Chris Wang. Not pictured: Elliot Schweitzer, Gada Tefera. </figcaption>
-                </figure>
-                <figure class="project-figure">
-                    <img src="images/confusion.png" alt="confusion matrix" class="project-image">
-                    <figcaption class="project-figcaption">
-                        3D confusion matrix for a 1-hidden layer (which performed better suprisingly than a 5 hidden layer network) on about 150,000 unseen objects, from my Astronomy 101 final project in 2022.
-                    </figcaption>
-                </figure>
-                <p class="project-description">p-stars is a team of 12 undergraduates from Pomona College, Harvey Mudd College, and Pitzer College with the aim of classifying variable stars using unsupervised clustering. We are working primarily with the ASAS-SN catalog of variable stars, which is a collection of ~300,000 variable stars with labels, building off of my work in Fall 2022 <a href="https://github.com/oscars47/UCVS/blob/main/papers/Astro101_Final_Project_FINAL.pdf">detailed in my research report.</a> We are developing a metric for our input space of variability indices, a collection of 36 different statisitical functions designed to quantify the variation of a star's magnitude over time. Moreover, inspired by Valenzuela et al. (2018), we are building a tree structure based on the idea that one can imagine slicing a lightcurve (brightness over time) into subsequences that correspond to tokens in a large language model (LLM).
-
-                    We are also considering the Hubble Catalog of Variables (HCV), which is a set of 84,000 unlabeled objects with much more sparse data per object in order to increase the versatility of the process. Previously my research partner Graham Hirsch and I developed a restrictive search algorithm in the summer of 2022 and <a href = "https://github.com/oscars47/UCVS/blob/main/papers/oscar_graham_summer2022.pdf" >found 2 potential tidal disruption events, </a> which if confirmed would be the first experimental observation of a black hole found in the HCV. Pomona College also operates the Table Mountain Observatory, which we can use for follow-up observations. </p>
-                    
-                </p>
-            </div> 
-            <div class="project">
-                <a href="https://github.com/oscars47/q-elegans" class="project-title">Spring 2023, q-elegans</a>
-                <figure class="project-figure">
-                    <img src="images/q-elegans.png" alt="circuit" class="project-image">
-                    <figcaption class="project-figcaption">Sample circuit with 4 qubits, showing the initial encoding phase with Ry gates and the rest of the algorithm with entangling gates to various degrees, as well as a final sequence of Rx, Ry, and Rz gates.</figcaption>
-                </figure>
-                <figure class="project-figure">
-                    <img src="images/worm.webp" alt="c. elegans" class="project-image">
-                    <figcaption class="project-figcaption">The worm C. Elegans with its neurons shown in green, from <a href = "https://www.nature.com/articles/d41586-023-03619-w">nature.com/articles/d41586-023-03619-w</a>. </figcaption>
-                </figure>
-                <p class="project-description">Inspired by a paper about the strange behavior of neuropeptides in the worm C. elegans by Ripoll-Sánchez et al. (2023), I created this simple quantum circuit in Cirq as a possible hybrid quantum machine learning algorithm that takes classical inputs, converts them into quantum states via phase encoding, entangles all the states together--modeled on the action of the neuropeptides--to adjustable levels, and then performs single qubit rotations before converting back to classical probability output via measurement.</p>
-            </div>
-            <div class="project">
-                <a href="https://github.com/oscars47/Literary-RNN" class="project-title">Fall 2022, Thinking Parrot</a>
-                <figure class="project-figure">
-                    <img src="images/wandb.png" alt="parallel coordinates plot" class="project-image">
-                    <figcaption class="project-figcaption">Parallel Coordinates plot from <a href = "https://wandb.ai/" >WandB</a> of the hyperparameters of the best model.
-
-                    </figcaption>
-                </figure>
-                <p class="project-description">Designed, implemented, and trained a custom long short-term memory (LSTM) recurrent nerual network called "Thinking Parrot" on the works of the ficitous scholar Nasrudin based on the lines, "To save money, I made my donkey go without food. Unfortunately the experiment was interrupted by its death. It died before it got used to having no food at all. People sell talking parrots for huge sums. They never pause to compare the possible value of a thinking parrot.". I wrote  <a href = "https://github.com/oscars47/Literary-RNN/tree/main/papers">two essays of over 120 words total</a> explaining the model to a non-CS audience and intepreting its results literarily.
-                </p>
-
-            </div> 
-            <div class="project">
-                <a href="https://github.com/p-ai-org/p-music" class="project-title">Fall 2022, p-music</a>
-                <figure class="project-figure">
-                    <img src="images/music.png" alt="spectrogram" class="project-image">
-                    <figcaption class="project-figcaption">Spectrogram for the song "The Choice is Yours" generated through my pipeline.</figcaption>
-                </figure>
-                <figure class="project-figure">
-                    <img src="images/music_pipe.png" alt="spectrogram" class="project-image">
-                    <figcaption class="project-figcaption">Pipeline I developed, with each of the Python files labeled and organized according to use.</figcaption>
-                </figure>
-                <p class="project-description">Worked with Seohyeon Lee (Pomona College '24) and Marwin Bit (Harvey Mudd College '25) in a project to rank top songs. I designed and implemented a automatic pipeline for given a list of songs, extract their metadata via Spotify API, download them locally and convert into spectrograms for input to a convolutional neural network to classify them.</p>
-            </div> 
-            </div>
-            <!-- Add more projects as needed -->
-            <!-- <div class="project">
-                <a href="https://github.com/yourusername/project2" class="project-title">Project Title 2</a>
-                <figure class="project-figure">
-                    <img src="path/to/project2-image.jpg" alt="Project 2 Image" class="project-image">
-                    <figcaption class="project-figcaption">Caption for Project 2</figcaption>
-                </figure>
-                <p class="project-description">Description of Project 2.</p>
-            </div>
-        </div>
-    <- <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-            <h3>Project Title 2</h3>
-            <p>June 2021 - Description of Project 2...</p>
-        </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-            <h3>Project Title 3</h3>
-            <p>June 2021 - Description of Project 3...</p>
-        </div> -->
-    <div class="news">
-        <h2>News</h2> <!-- Label for the news column -->
+      <h3>Analog Hamiltonian simulation</h3>
+      <ul class="papers">
+        <li>
+           <a href="https://arxiv.org/abs/2609.38738">Generalization of my idea for the procedure to achieve approximately random evolution from QuEra's Aquila to a wide variety of physical systems.<span class="paper-icon" aria-hidden="true">📄</span></a>
+           </li>
+           <li>
+          <a href="https://arxiv.org/abs/2604.24854">Measuring and controlling the flow of entanglement with a chain of neutral atoms using disorder in the local detuning of light; experiment with QuEra's Aquila device.<span class="paper-icon" aria-hidden="true">📄</span></a>
+          </li>
         
-    <div class="news-item">
+      </ul>
 
-        <h3 class="news-title">June 2024</h3>
-        <figure class="news-figure">
-            <img src="images/cambridge.jpeg" alt="trabbit" class="news-img">
-        </figure>
-        <p class="news-description"> Accepted to Cambridge University in an MPhil program in Physics under the supervision of Dr. Dorian Gangloff in the <a href = "https://qeg.phy.cam.ac.uk/">Quantum Engineering Group</a> on solid-state spins and photons, focusing for my MPhil on a mapping between an array of neutral Rydberg atom and central atom spin systems.</p> 
+      <h3>Data encoding and algorithms</h3>
+      <ul class="papers">
+        <li><span class="pending">To appear</span></li>
+      </ul>
 
-        <h3 class="news-title">June 2024</h3>
-        <figure class="news-figure">
-            <img src="images/imperial.png" alt="trabbit" class="news-img">
-        </figure>
-        <p class="news-description"> Joined Dr. Lee's group at Imperial College simulating HA molcule electron transport using Gaussian Boson Sampling. </p> 
+      <h3>Linear optics</h3>
+      <ul class="papers">
+        <li>
+          <a href="https://journals.aps.org/prresearch/abstract/10.1103/vdb2-t7bz">Distinguishing fully entangled states with only linear evolution and local measurement<span class="paper-icon" aria-hidden="true">📄</span></a>
+        </li>
+      </ul>
 
-        <h3 class="news-title">May 2024</h3>
-        <figure class="news-figure">
-            <img src="images/daison.png" alt="trabbit" class="news-img">
-        </figure>
-        <p class="news-description"> Joined Dasion (Data-To-Decision) as a machine learning engineer and Principal Investigator! 
-            <figure class="news-figure">
-                <img src="images/pomona2.jpeg" alt="trabbit" class="news-img">
-            </figure>
-            Graduated from Pomona College with a B.A. in Physics and Math on May 12, 2024. Chirp chirp!</p>
+      <h2>BriefBio</h2>
+      <ul class="bio">
+        <li>
+          <span class="when">Oct 2025 &ndash; present</span>
+          DPhil in Physics with Andrew Daley (Atomic and Laser Physics) and Bálint Koczor
+          (Mathematical Institute) at the University of Oxford
+        </li>
+        <li>
+          <span class="when">Oct 2024 &ndash; July 2025</span>
+          MPhil in Physics at the University of Cambridge with Dorian Gangloff,
+          and summer research intern
+        </li>
+        <li>
+          <span class="when">Fall 2023-Spring 2024</span>
+          BA in Physics and Applied Mathematics at Pomona College: senior theses with
+          Theresa Lynn (Harvey Mudd College) and Ami Radunskaya (Pomona College)
+        </li>
+      </ul>
 
-        <h3 class="news-title">February 2024</h3>
-        <figure class="news-figure">
-            <img src="images/daison.png" alt="trabbit" class="news-img">
-        </figure>
-        <p class="news-description"> Joined Dasion (Data-To-Decision) as a machine learning intern. </p>
+    </section>
+  </div>
+</main>
 
-        <h3 class="news-title">January 2024</h3>
-        <figure class="news-figure">
-            <img src="images/bread.jpeg" alt="trabbit" class="news-img">
-            <figcaption class="news-figcaption">Celebratory cookout in Boron, CA.</figcaption>
-        </figure>
-        <p class="news-description">Solved my undergraduate physics thesis on the limits of measuring certain kinds of entangled pairs without conditional logic! Manuscript in progress :) </p>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("theme-toggle");
 
-        <h3 class="news-title">December 2023</h3>
-        <figure class="news-figure">
-            <img src="images/trabbit.png" alt="trabbit" class="news-img">
-            <figcaption class="news-figcaption">Artistic representation of my trabbit algorithm.</figcaption>
-        </figure>
-        <p class="news-description">Published a package with the function trabbit, a custom gradient-descent based optimization algorithm, available at <a href="https://pypi.org/project/oscars-toolbox/">pypi.org/project/oscars-toolbox/</a> [have since added some helper functions for torch].</p>
+    function current() {
+      var set = root.getAttribute("data-theme");
+      if (set) return set;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
 
-        <h3 class="news-title">October 2023</h3>
-        <figure class="news-figure">
-            <img src="images/squint.jpeg" alt="squint" class="news-img">
-            <figcaption class="news-figcaption">Southwest Quantum Information and Technology (SQuInT) conference, October 2023.</figcaption>
-        </figure>
-        <p class="news-description">Presented results, "Entanglement Witnessing: a Neural Network Optimization and Experimental Realization", at <a href="https://physics.unm.edu/SQuInT/2023/index.php">Southwest Quantum Information and Technology (SQuInT) conference, October 2023</a>. </p>
+    btn.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  })();
 
-    </div>
+  // Easter egg: click the portrait to cycle through photos.
+  // Add more entries here and they join the rotation.
+  (function () {
+    var photos = [
+      { src: "images/oscar.jpeg", alt: "Oscar Scholin" },
+      { src: "images/bread.jpg", alt: "Oscar Scholin holding a slice of bread on a skewer at a cookout in Boron, CA" }
+    ];
+    if (photos.length < 2) return;
 
-</div>
-    
+    var img = document.getElementById("portrait-img");
+    var i = 0;
+
+    photos.slice(1).forEach(function (p) {
+      var pre = new Image();
+      pre.src = p.src;
+    });
+
+    var lastSwap = 0;
+
+    function swap() {
+      // A tap fires touchend and then a synthesized click; ignore the echo.
+      var now = Date.now();
+      if (now - lastSwap < 500) return;
+      lastSwap = now;
+
+      i = (i + 1) % photos.length;
+      var nextPhoto = photos[i];
+      img.style.opacity = "0";
+      window.setTimeout(function () {
+        img.src = nextPhoto.src;
+        img.alt = nextPhoto.alt;
+        img.style.opacity = "1";
+      }, 140);
+    }
+
+    img.addEventListener("click", swap);
+
+    // Fallback for touch devices, and so a scroll that starts on the photo
+    // doesn't count as a tap.
+    var startX = 0, startY = 0;
+    img.addEventListener("touchstart", function (e) {
+      var t = e.changedTouches[0];
+      startX = t.clientX;
+      startY = t.clientY;
+    }, { passive: true });
+
+    img.addEventListener("touchend", function (e) {
+      var t = e.changedTouches[0];
+      if (Math.abs(t.clientX - startX) < 10 && Math.abs(t.clientY - startY) < 10) swap();
+    }, { passive: true });
+  })();
+</script>
+
 </body>
-
 </html>
