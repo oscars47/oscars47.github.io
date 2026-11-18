@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Literary writing — Oscar Scholin</title>
+<meta name="description" content="Essays and interviews published in Northwest Review.">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Applied before paint so the page never flashes the wrong theme.
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+
+<button id="theme-toggle" type="button" aria-label="Switch colour theme">
+  <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.2"></circle>
+    <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"></path>
+  </svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20 14.5A8.2 8.2 0 0 1 9.5 4a8.3 8.3 0 1 0 10.5 10.5z"></path>
+  </svg>
+</button>
+
+<header>
+  <h1><a class="home-link" href="index.html">Oscar Scholin</a></h1>
+  <p class="page-title">Literary writing</p>
+</header>
+
+<main>
+  <div class="page">
+
+    <p class="intro">
+      I enjoy reading fiction. 
+      My current favorites are Yasunari Kawabata, Natsume
+      Sōseki, Banana Yoshimoto, and Haruki Murakami. I've also written some commentary and other thoughts.
+    </p>
+
+    <h3>Published pieces</h3>
+
+    <ul class="bio">
+      <li>
+        <span class="when">Spring 2023, Northwest Review</span>
+        An interview with Jonathan Lethem on the influence of generative AI on
+        literature.
+        <a class="source" href="https://nwreview.org/journal/52/02/oscar-scholin/">nwreview.org/journal/52/02/oscar-scholin</a>
+      </li>
+      <li>
+        <span class="when">Spring 2022, Northwest Review</span>
+        An essay on Adam McKay's film &ldquo;Don't Look Up&rdquo;.
+        <a class="source" href="https://nwreview.org/journal/51/02/oscar-scholin/">nwreview.org/journal/51/02/oscar-scholin</a>
+      </li>
+    </ul>
+
+    <nav class="links back">
+      <a href="index.html">&larr; Back</a>
+    </nav>
+
+  </div>
+</main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("theme-toggle");
+
+    function current() {
+      var set = root.getAttribute("data-theme");
+      if (set) return set;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    btn.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  })();
+</script>
+
+</body>
+</html>

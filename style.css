@@ -322,3 +322,36 @@ h1 .home-link:hover { color: var(--accent); }
   .gallery { gap: 2rem; }
   .links.back { justify-content: flex-start; }
 }
+
+/* ---------- Literary writing page ---------- */
+
+.bio a.source {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.page .intro {
+  margin: 0 0 0.9rem;
+  max-width: 62ch;
+}
+
+.page h3 {
+  margin-top: 2.25rem;
+}
+
+.bio .summary {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+}
+
+.links.page-end {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  flex-direction: row;
+  /* Stays left-aligned with the body text, including under the mobile rule
+     that centres the sidebar links. */
+  justify-content: flex-start;
+}
